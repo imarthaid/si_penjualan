@@ -9,21 +9,24 @@
                                 <h4>Registration</h4>
                                 <h1 class="mb-3 h2"><?= $label; ?></h1>
                             </div>
-                            <form class="pt-3">
+                            <form action="<?= base_url('auth/regist'); ?>" method="post" class="pt-3">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Full Name">
+                                    <input type="text" class="form-control form-control-lg mb-2" name="name" id="name" placeholder="Full Name" value="<?= set_value('name'); ?>">
+                                    <small class="text-danger"><?= form_error('name'); ?></small>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                                    <input type="text" class="form-control form-control-lg mb-2" name="email" id="email" placeholder="Email" value="<?= set_value('email'); ?>">
+                                    <small class="text-danger"><?= form_error('email'); ?></small>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                    <input type="password" class="form-control form-control-lg mb-2" name="password1" id="password1" placeholder="Password">
+                                    <small class="text-danger"><?= form_error('password1'); ?></small>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Refeat Password">
+                                    <input type="password" class="form-control form-control-lg mb-2" name="password2" id="password2" placeholder="Refeat Password">
                                 </div>
                                 <div class="mt-3">
-                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
+                                    <button type="submit" name="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
                                     Already have an account? <a href="<?= base_url('auth'); ?>" class="text-primary">Login</a>

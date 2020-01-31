@@ -9,15 +9,56 @@
                                 <h4>Login</h4>
                                 <h1 class="mb-3 h2"><?= $label; ?></h1>
                             </div>
-                            <form class="pt-3">
+                            <?php if ($this->session->flashdata('pesan')) : ?>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            Akun <strong>berhasil </strong><?= $this->session->flashdata('pesan'); ?>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ($this->session->flashdata('gagal')) : ?>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            Akun <strong>belum </strong><?= $this->session->flashdata('gagal'); ?>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ($this->session->flashdata('password_gagal')) : ?>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <?= $this->session->flashdata('password_gagal'); ?>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <form action="<?= base_url('auth'); ?>" method="post" class="pt-2">
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                                    <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Email" value="<?= set_value('email'); ?>">
+                                    <small class="text-danger"><?= form_error('email'); ?></small>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                    <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password">
+                                    <small class="text-danger"><?= form_error('password'); ?></small>
                                 </div>
                                 <div class="mt-3">
-                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a>
+                                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
                                     <a href="#" class="auth-link text-black text-decoration-none d-block mb-3">Forgot password?</a>

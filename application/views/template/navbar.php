@@ -134,9 +134,9 @@
                         </li>
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                                <span class="nav-profile-name">Johnson</span>
+                                <span class="nav-profile-name"><?= $user['name']; ?></span>
                                 <span class="online-status"></span>
-                                <img src="<?= base_url('vendor/template/'); ?>images/faces/face28.png" alt="profile" />
+                                <img src="<?= base_url('assets/image/profil/'); ?><?= $user['image']; ?>" alt="profile" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                                 <a class="dropdown-item">
