@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="<?= base_url('vendor/template/'); ?>css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="<?= base_url('vendor/template/'); ?>images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 </head>
 
 <body>

@@ -31,7 +31,9 @@
 <script src="<?= base_url('vendor/template/'); ?>vendors/justgage/raphael-2.1.4.min.js"></script>
 <script src="<?= base_url('vendor/template/'); ?>vendors/justgage/justgage.js"></script>
 <!-- Custom js for this page-->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 <script src="<?= base_url('vendor/template/'); ?>js/dashboard.js"></script>
+<script src="<?= base_url('assets/js/custom.js'); ?>"></script>
 <!-- End custom js for this page-->
 </body>
 

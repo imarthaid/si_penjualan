@@ -139,11 +139,15 @@
                                 <img src="<?= base_url('assets/image/profil/'); ?><?= $user['image']; ?>" alt="profile" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-settings text-primary"></i>
-                                    Settings
+                                <a href="<?= base_url('profil'); ?>" class="dropdown-item text-decoration-none">
+                                    <i class="mdi mdi-account-box text-primary"></i>
+                                    Profil
                                 </a>
-                                <a href="<?= base_url('auth'); ?>" class="dropdown-item text-decoration-none">
+                                <a href="<?= base_url(); ?>" class="dropdown-item text-decoration-none">
+                                    <i class="mdi mdi-settings text-primary"></i>
+                                    Setting
+                                </a>
+                                <a href="<?= base_url('auth/logout'); ?>" class="dropdown-item text-decoration-none">
                                     <i class="mdi mdi-logout text-primary"></i>
                                     Logout
                                 </a>
@@ -168,48 +172,48 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="mdi mdi-cube-outline menu-icon"></i>
-                            <span class="menu-title">UI Elements</span>
+                            <span class="menu-title">Master Produk</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="submenu">
                             <ul>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Kategory</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Data Produk</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/forms/basic_elements.html" class="nav-link">
-                            <i class="mdi mdi-chart-areaspline menu-icon"></i>
-                            <span class="menu-title">Form Elements</span>
+                        <a href="#" class="nav-link">
+                            <i class="mdi mdi-cube-outline menu-icon"></i>
+                            <span class="menu-title">Users</span>
                             <i class="menu-arrow"></i>
                         </a>
+                        <div class="submenu">
+                            <ul>
+                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Pemilik</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Kasir</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Member</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="pages/charts/chartjs.html" class="nav-link">
                             <i class="mdi mdi-finance menu-icon"></i>
-                            <span class="menu-title">Charts</span>
+                            <span class="menu-title">Penjualan</span>
                             <i class="menu-arrow"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="pages/tables/basic-table.html" class="nav-link">
                             <i class="mdi mdi-grid menu-icon"></i>
-                            <span class="menu-title">Tables</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/icons/mdi.html" class="nav-link">
-                            <i class="mdi mdi-emoticon menu-icon"></i>
-                            <span class="menu-title">Icons</span>
+                            <span class="menu-title">Stok Barang</span>
                             <i class="menu-arrow"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="mdi mdi-codepen menu-icon"></i>
-                            <span class="menu-title">Sample Pages</span>
+                            <span class="menu-title">Laporan</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="submenu">
@@ -221,11 +225,6 @@
                                 <li class="nav-item"><a class="nav-link" href="pages/samples/lock-screen.html">Lockscreen</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="docs/documentation.html" class="nav-link">
-                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Documentation</span></a>
                     </li>
                 </ul>
             </div>

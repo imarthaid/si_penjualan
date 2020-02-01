@@ -43,7 +43,7 @@ class Auth extends CI_Controller
                     ];
 
                     $this->session->set_userdata($data);
-                    redirect('user');
+                    redirect('home');
                 } else {
                     $this->session->set_flashdata('password_gagal', 'aktif');
                     redirect(base_url('auth'));
