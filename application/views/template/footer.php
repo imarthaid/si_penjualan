@@ -1,3 +1,20 @@
+<!-- Modal -->
+<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="exampleModalLabel">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-dark">Role anda tidak bisa akses halaman ini</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- content-wrapper ends -->
 <!-- partial:partials/_footer.html -->
 <footer class="footer">
@@ -30,9 +47,28 @@
 <script src="<?= base_url('vendor/template/'); ?>vendors/chartjs-plugin-datalabels/chartjs-plugin-datalabels.js"></script>
 <script src="<?= base_url('vendor/template/'); ?>vendors/justgage/raphael-2.1.4.min.js"></script>
 <script src="<?= base_url('vendor/template/'); ?>vendors/justgage/justgage.js"></script>
+
+
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="<?= base_url('vendor/template/'); ?>js/template.js"></script>
+<!-- endinject -->
+<!-- plugin js for this page -->
+<script src="<?= base_url('vendor/template/'); ?>vendors/typeahead.js/typeahead.bundle.min.js"></script>
+<script src="<?= base_url('vendor/template/'); ?>vendors/select2/select2.min.js"></script>
+<!-- End plugin js for this page -->
 <!-- Custom js for this page-->
+<script src="<?= base_url('vendor/template/'); ?>js/file-upload.js"></script>
+<script src="<?= base_url('vendor/template/'); ?>js/typeahead.js"></script>
+<script src="<?= base_url('vendor/template/'); ?>js/select2.js"></script>
+
+
+
+
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 <script src="<?= base_url('vendor/template/'); ?>js/dashboard.js"></script>
+<!-- End custom js for this page-->
 <script src="<?= base_url('vendor/template/'); ?>js/code.js"></script>
 <!-- End custom js for this page-->
 </body>

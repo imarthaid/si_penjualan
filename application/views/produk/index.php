@@ -4,17 +4,11 @@
         <div class="content-wrapper">
             <div class="row" style="min-height: 600px !important;">
                 <div class="col-sm-12 flex-column d-flex stretch-card">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a class="text-decoration-none text-dark" href="<?= base_url(); ?>">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-decoration-none text-dark" href="<?= $page_url; ?>"><?= $page; ?></a></li>
-                            <li class="ml-auto"><a href="<?= base_url('produk/add'); ?>" class="btn btn-info ml-auto"><i class="mdi mdi-folder-plus mr-2"></i>Tambah Produk</a></li>
-                        </ol>
-                    </nav>
                     <div class="row">
                         <div class="col-sm-12 grid-margin d-flex stretch-card">
                             <div class="card">
                                 <div class="card-body">
+                                    <a href="<?= base_url('produk/add'); ?>" class="btn btn-info ml-auto mb-3 text-white float-right"><i class="mdi mdi-folder-plus mr-2"></i>Tambah Produk</a>
                                     <table class="table hover display" id="myTable">
                                         <thead class="table-primary text-dark font-weight-bold">
                                             <tr>
@@ -38,8 +32,8 @@
                                                     <td><?= $prd['modal']; ?></td>
                                                     <td><?= $prd['jual']; ?></td>
                                                     <td class="text-center">
-                                                        <button class="btn btn-success py-1 px-2">Edit</button>
-                                                        <a href="<?= base_url('kategori/hapus/'); ?><?= $prd['id']; ?>" class="btn btn-danger py-1 px-2">Hapus</a>
+                                                        <a href="<?= base_url('produk/edit/'); ?><?= $prd['id']; ?>" class="btn btn-success py-1 px-2 text-white">Edit</a>
+                                                        <a href="<?= base_url('produk/hapus/'); ?><?= $prd['id']; ?>" class="btn btn-danger py-1 px-2">Hapus</a>
                                                     </td>
                                                 </tr>
                                                 <?php $i++; ?>

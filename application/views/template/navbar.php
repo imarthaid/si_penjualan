@@ -154,20 +154,7 @@
                             <span class="menu-title">Produk</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="mdi mdi-cube-outline menu-icon"></i>
-                            <span class="menu-title">Users</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="submenu">
-                            <ul>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Pemilik</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Kasir</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Member</a></li>
-                            </ul>
-                        </div>
-                    </li>
+
                     <li class="nav-item">
                         <a href="pages/charts/chartjs.html" class="nav-link">
                             <i class="mdi mdi-finance menu-icon"></i>
@@ -182,6 +169,25 @@
                             <i class="menu-arrow"></i>
                         </a>
                     </li>
+
+                    <?php if ($user['role_id'] == 4) : ?>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#message">
+                                <i class="mdi mdi-finance menu-icon"></i>
+                                <span class="menu-title">Users</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                            <a href="<?= base_url('users'); ?>" class="nav-link">
+                                <i class="mdi mdi-finance menu-icon"></i>
+                                <span class="menu-title">Users</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="mdi mdi-codepen menu-icon"></i>

@@ -32,4 +32,14 @@ class Produk_model extends CI_Model
         $kode = $kode_nama . $kode_nomor;
         return $kode;
     }
+
+    public function getById($id)
+    {
+        $this->db->order_by('id', 'DESC');
+        $this->db->select('tb_produk.*, tb_kategori.nama as nama_kategori');
+        $this->db->from('tb_produk');
+        $this->db->join('tb_kategori', 'tb_kategori.id = tb_produk.id_kategori');
+        $this->db->where('tb_produk.id', $id);
+        return $this->db->get()->row_array();
+    }
 }

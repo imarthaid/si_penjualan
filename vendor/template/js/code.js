@@ -1,3 +1,4 @@
+console.log('OK');
 $(document).ready(function () {
     $('#myTable').DataTable({
         info: false
@@ -21,4 +22,8 @@ $(document).ready(function () {
         })
         console.log(id);
     })
+
+    $('.js-example-basic-single').select2({
+        placeholder: 'Select an option'
+    });
 })
