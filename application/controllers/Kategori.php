@@ -14,6 +14,8 @@ class Kategori extends CI_Controller
         $data['kategori'] = $this->Kategori_model->get();
         $data['title'] = 'Kategori Page';
         $data['label'] = 'Sistem Informasi Penjualan';
+        $data['page'] = 'Kategori';
+        $data['page_url'] = base_url('kategori');
         $this->load->view('template/header', $data);
         $this->load->view('template/navbar', $data);
         $this->load->view('kategori/index');
@@ -31,6 +33,18 @@ class Kategori extends CI_Controller
     {
         $this->db->where('id', $id);
         $this->db->delete('tb_kategori');
+        redirect('kategori');
+    }
+
+    public function getEdit()
+    {
+        echo json_encode($this->Kategori_model->getKategoriById($_POST['id']));
+    }
+
+    public function edit()
+    {
+        $this->Kategori_model->ubahKategori($_POST);
+        $this->session->set_flashdata('flash', 'Diubah');
         redirect('kategori');
     }
 }

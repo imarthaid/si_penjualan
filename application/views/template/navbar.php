@@ -4,10 +4,11 @@
         <nav class="navbar top-navbar col-lg-12 col-12 p-0">
             <div class="container-fluid">
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
-                    <ul class="navbar-nav navbar-nav-left">
-                        <li class="nav-item ml-0 mr-5 d-lg-flex d-none">
-                            <a href="#" class="nav-link horizontal-nav-left-menu"><i class="mdi mdi-format-list-bulleted"></i></a>
-                        </li>
+                    <div class="ml-2 navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo" href="#"><i class="mdi mdi-store mx-0 mr-3 text-info"></i><?= $label; ?></a>
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('vendor/template/'); ?>images/logo-mini.svg" alt="logo" /></a>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-right">
                         <li class="nav-item dropdown">
                             <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
                                 <i class="mdi mdi-bell mx-0"></i>
@@ -77,7 +78,7 @@
                                 </a>
                                 <a class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
-                                        <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                                        <img src="<?= base_url('vendor/template/'); ?>images/faces/face2.jpg" alt="image" class="profile-pic">
                                     </div>
                                     <div class="preview-item-content flex-grow">
                                         <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
@@ -89,7 +90,7 @@
                                 </a>
                                 <a class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
-                                        <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                                        <img src="<?= base_url('vendor/template/'); ?>images/faces/face3.jpg" alt="image" class="profile-pic">
                                     </div>
                                     <div class="preview-item-content flex-grow">
                                         <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
@@ -103,34 +104,6 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link count-indicator "><i class="mdi mdi-message-reply-text"></i></a>
-                        </li>
-                    </ul>
-                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo" href="#"><?= $label; ?></a>
-                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('vendor/template/'); ?>images/logo-mini.svg" alt="logo" /></a>
-                    </div>
-                    <ul class="navbar-nav navbar-nav-right">
-                        <li class="nav-item dropdown  d-lg-flex d-none">
-                            <button type="button" class="btn btn-inverse-primary btn-sm">Product </button>
-                        </li>
-                        <li class="nav-item dropdown d-lg-flex d-none">
-                            <a class="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-toggle="dropdown">
-                                Reports
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown">
-                                <p class="mb-0 font-weight-medium float-left dropdown-header">Reports</p>
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-file-pdf text-primary"></i>
-                                    Pdf
-                                </a>
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-file-excel text-primary"></i>
-                                    Exel
-                                </a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown d-lg-flex d-none">
-                            <button type="button" class="btn btn-inverse-primary btn-sm">Settings</button>
                         </li>
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
@@ -164,23 +137,22 @@
             <div class="container">
                 <ul class="nav page-navigation">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="<?= base_url('home'); ?>">
                             <i class="mdi mdi-file-document-box menu-icon"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="mdi mdi-cube-outline menu-icon"></i>
-                            <span class="menu-title">Master Produk</span>
-                            <i class="menu-arrow"></i>
+                        <a class="nav-link" href="<?= base_url('kategori'); ?>">
+                            <i class="mdi mdi-file-document-box menu-icon"></i>
+                            <span class="menu-title">Kategori</span>
                         </a>
-                        <div class="submenu">
-                            <ul>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Kategory</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Data Produk</a></li>
-                            </ul>
-                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('produk'); ?>">
+                            <i class="mdi mdi-file-document-box menu-icon"></i>
+                            <span class="menu-title">Produk</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
